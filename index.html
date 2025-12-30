@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地方氣候變遷政策 - 桃園市氣候變遷專區</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-red: #b71c1c;
+            --secondary-red: #e57373;
+            --bg-pink: #fce4e4;
+            --ocean-blue: #006064;
+            --light-blue: #e0f2f1;
+        }
+
+        body { 
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
+            background-color: var(--bg-pink); 
+            margin: 0; 
+            display: flex;
+            color: #2c3e50;
+        }
+
+        /* 側邊導覽列 */
+        .sidebar {
+            width: 250px;
+            background: white;
+            height: 100vh;
+            position: fixed;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            z-index: 100;
+        }
+        .sidebar-brand { text-align: center; color: var(--primary-red); font-weight: bold; padding: 20px; border-bottom: 1px solid #eee; }
+        .sidebar-menu { list-style: none; padding: 20px; }
+        .sidebar-menu li { margin-bottom: 15px; }
+        .sidebar-menu a { text-decoration: none; color: #555; font-weight: bold; display: flex; align-items: center; transition: 0.3s; }
+        .sidebar-menu a i { margin-right: 10px; width: 20px; color: var(--secondary-red); }
+        .sidebar-menu a:hover { color: var(--primary-red); transform: translateX(5px); }
+
+        /* 主內容區 */
+        .main-content { margin-left: 250px; flex: 1; padding: 40px; }
+        .section-card { background: white; border-radius: 15px; padding: 35px; margin-bottom: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        
+        h1 { color: var(--primary-red); margin-bottom: 10px; }
+        h2 { border-left: 5px solid var(--primary-red); padding-left: 15px; color: var(--ocean-blue); margin-top: 0; }
+        .subtitle { color: #7f8c8d; margin-bottom: 30px; }
+
+        /* 調適領域卡片網格 */
+        .domain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .domain-card { 
+            background: #fff; border: 1px solid #ffcdd2; border-radius: 10px; padding: 15px; 
+            text-align: center; transition: 0.3s; cursor: pointer;
+        }
+        .domain-card:hover { background: #fff5f5; border-color: var(--primary-red); transform: translateY(-3px); }
+        .domain-card i { font-size: 1.5rem; color: var(--secondary-red); margin-bottom: 8px; }
+        .domain-card .count { display: block; font-size: 0.8rem; color: #999; margin-top: 5px; }
+
+        /* 衝擊分析表格 */
+        .impact-table { width: 100%; border-collapse: collapse; margin-top: 20px; overflow: hidden; border-radius: 10px; }
+        .impact-table th { background: #00838f; color: white; padding: 15px; text-align: left; }
+        .impact-table td { padding: 15px; border-bottom: 1px solid #eee; background: #fafafa; }
+        .scenario-tag { display: inline-block; padding: 3px 10px; border-radius: 5px; background: #ffecb3; color: #f57f17; font-weight: bold; font-size: 0.9rem; }
+        .dept-tag { font-size: 0.8rem; color: var(--ocean-blue); background: var(--light-blue); padding: 2px 5px; border-radius: 3px; }
+
+        /* 下載區 */
+        .download-area { text-align: center; border-top: 2px dashed #ffcdd2; padding-top: 40px; margin-top: 60px; }
+        .btn-download { 
+            background: var(--primary-red); color: white !important; text-decoration: none;
+            padding: 15px 40px; border-radius: 35px; font-weight: bold; display: inline-flex; align-items: center; transition: 0.3s;
+        }
+        .btn-download:hover { background: #880e4f; transform: scale(1.05); }
+        .btn-download i { margin-right: 10px; font-size: 1.2rem; }
+
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .main-content { margin-left: 0; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-brand">氣候變遷政策專區</div>
+        <ul class="sidebar-menu">
+            <li><a href="#framework"><i class="fas fa-sitemap"></i> 政策架構</a></li>
+            <li><a href="#domains"><i class="fas fa-th-large"></i> 調適領域</a></li>
+            <li><a href="#analysis"><i class="fas fa-chart-bar"></i> 衝擊分析案例</a></li>
+            <li><a href="#download"><i class="fas fa-file-pdf"></i> 下載專區</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header>
+            <h1>地方氣候變遷政策</h1>
+            <p class="subtitle">核心依據：桃園市氣候變遷調適執行方案</p>
+        </header>
+
+        <section id="framework" class="section-card">
+            <h2>壹、 地方氣候變遷政策架構</h2>
+            <p>桃園市以「桃園市推動淨零城市自治條例」為法制基礎，建立跨局處調適機制。</p>
+            <div style="text-align: center;">
+                <img src="policy_framework.png" alt="政策架構圖" style="max-width: 100%; border-radius: 10px; border: 1px solid #eee;">
+            </div>
+        </section>
+
+        <section id="domains" class="section-card">
+            <h2>貳、 調適領域框架</h2>
+            <p>依據執行方案，桃園市劃分 8 大調適領域，共計推動 89 項調適計畫。</p>
+            <div class="domain-grid">
+                <div class="domain-card"><i class="fas fa-info-circle"></i><div>能力建構</div><span class="count">計畫數:13</span></div>
+                <div class="domain-card"><i class="fas fa-map-marked-alt"></i><div>土地利用</div><span class="count">計畫數:28</span></div>
+                <div class="domain-card"><i class="fas fa-tint"></i><div>水資源</div><span class="count">計畫數:12</span></div>
+                <div class="domain-card"><i class="fas fa-bolt"></i><div>能源供給</div><span class="count">計畫數:12</span></div>
+                <div class="domain-card"><i class="fas fa-seedling"></i><div>農業生產</div><span class="count">計畫數:12</span></div>
+                <div class="domain-card"><i class="fas fa-heartbeat"></i><div>健康領域</div><span class="count">計畫數:8</span></div>
+                <div class="domain-card"><i class="fas fa-tools"></i><div>維生設施</div><span class="count">計畫數:2</span></div>
+                <div class="domain-card"><i class="fas fa-anchor"></i><div>海岸及海洋</div><span class="count">計畫數:2</span></div>
+            </div>
+        </section>
+
+        <section id="analysis" class="section-card">
+            <h2>參、 衝擊分析與調適策略 (以能源供給及產業為例)</h2>
+            <p>針對不同極端氣候情境，各局處擬定具體因應措施，落實韌性城市目標。</p>
+            <table class="impact-table">
+                <thead>
+                    <tr>
+                        <th>情境設定</th>
+                        <th>潛在衝擊</th>
+                        <th>既有調適計畫 / 策略</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="scenario-tag">溫度上升 (熱浪)</span></td>
+                        <td>住宅及商用部門空調需求增加，造成用電負荷上升。</td>
+                        <td>
+                            • 公用房舍設置太陽能 <span class="dept-tag">經發局</span><br>
+                            • 推廣智慧儲能應用 <span class="dept-tag">經發局</span><br>
+                            • 打造光電城市
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="scenario-tag">極端降雨 (降水)</span></td>
+                        <td>工業區淹水風險，導致停工或原物料供應中斷。</td>
+                        <td>
+                            • 智慧防災水情系統 <span class="dept-tag">水務局</span><br>
+                            • 提升防救災應變能力 <span class="dept-tag">消防局</span><br>
+                            • 工業區自主防災
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div id="download" class="download-area">
+            <p>想進一步瞭解各領域詳細調適策略與目標？</p>
+            <a href="pdfs/桃園市氣候變遷調適執行方案.pdf" target="_blank" class="btn-download">
+                <i class="fas fa-file-pdf"></i> 下載《桃園市氣候變遷調適執行方案》完整手冊
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // 簡單的點擊滾動效果
+        document.querySelectorAll('.sidebar-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
